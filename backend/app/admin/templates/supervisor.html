@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="supervisors-div">
+        <div>
+            <h2>Available Supervisors</h2>
+            <ul>
+                {% for supervisor in supervisors %}
+                    <li><a href="http://localhost:7000/admins/supervisor?id={{supervisor.id}}">{{ supervisor.full_name }}</a></li>
+                {% endfor %}
+            </ul>
+        </div>
+        <div>
+            <h2>Create Supervisors</h2>
+            <form action="http://localhost:7000/admins/create_supervisor" method="POST">
+                <input type="text" placeholder="username" name="username">
+                <input type="text" placeholder="Full name" name="full_name">
+                <input type="email" id="" placeholder="Email" name="email">
+                <select id="" name="role">
+                    <option value="">Select Role</option>
+                    <option value="worker">Worker</option>
+                    <option value="supervisor">Supervisor</option>
+                </select>
+                <input type="password" placeholder="Password" name="password">
+                <button type="submit">Create Supervisors</button>
+                {{error}}
+            </form>
+        
+        </div>
+    </div>
+{% endblock content %}

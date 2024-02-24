@@ -1,0 +1,93 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: azure;
+}
+
+nav{
+    display: flex;
+    background-color: #63acf0;
+    padding: 10px;
+    color: azure;
+    justify-content: space-between;
+}
+nav a{
+    color: white;
+    text-decoration: none;
+}
+
+.login-div{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.login-div form, form{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+input, select{
+    padding: 10px;
+    margin: 10px;
+    border: none;
+    width: 20em;
+}
+
+input:focus, select:focus{
+    border: none;
+    outline: #63acf0 solid 1px;
+}
+
+button{
+    background-color: #63acf0;
+    border: none;
+    padding: 10px;
+    border-radius: 10px;
+    color: azure;
+    cursor: pointer;
+    text-transform:uppercase;
+    font-weight: bold;
+}
+
+.supervisors-div{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+ul{
+    list-style: none;
+    background-color: #63acf0;
+}
+li{
+    padding: 10px;
+}
+li:hover{
+    background-color: azure;
+    cursor: pointer;
+}
+
+.supervisor{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* background-color: #63acf0; */
+    padding: 20px;
+}
+.supervisor div p{
+    padding: 10px;
+}
+
+.supervisor-action{
+    display: flex;
+    justify-content: space-around;
+}

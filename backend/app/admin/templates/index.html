@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="login-div">
+    <h1>PLEASE LOGIN</h1>
+    <form action="http://localhost:7000/admins" method="POST">
+        <input type="text" placeholder="email" name="username">
+        <input type="password" placeholder="password" name="password">
+        <button type="submit">LOGIN</button>
+    </form>
+    {{ error }}
+</div>
+{% endblock content %}

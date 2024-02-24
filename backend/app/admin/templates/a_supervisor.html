@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block content %}
+    <div class="supervisor">
+        <h2>Supervisor</h2>
+        <div>
+            <form action="http://localhost:7000/admins/create_supervisor" method="PUT">
+                <input type="text" placeholder="username" value="{{ supervisor.username }}">
+                <input type="text" placeholder="Full name" value="{{ supervisor.full_name }}">
+                <input type="email" name="" id="" placeholder="Email" value="{{ supervisor.email }}">
+                <select name="" id="">
+                    <option value="">Select Role</option>
+                    <option value="">Worker</option>
+                    <option value="">Supervisor</option>
+                </select>
+                <button type="submit">Edit Supervisors</button>
+            </form>
+            <div class="supervisor-action">
+                <button>Edit</button>
+                <button>Delete</button>
+            </div>
+        </div>
+    </div>
+{% endblock content %}
