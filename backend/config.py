@@ -12,6 +12,8 @@ class Config:
 
 class DevelopmentConfig(Config):
     DEBUG = True
+    # SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL') or \
+    #     'mysql://hezekiahdev:qwerty@localhost/billing'
     SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL') or \
         'sqlite:///' + os.path.join(basedir, 'billing_dev.sqlite')
     SQLALCHEMY_TRACK_MODIFICATIONS = False
@@ -33,8 +35,11 @@ class TestingConfig(Config):
 
 
 class ProductionConfig(Config):
+    # SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL') or \
+    #     'sqlite:///' + os.path.join(basedir, 'billing.sqlite')
+    # use mysql instead
     SQLALCHEMY_DATABASE_URI = os.environ.get('DATABASE_URL') or \
-        'sqlite:///' + os.path.join(basedir, 'billing.sqlite')
+        'mysql://hezekiahdev:qwerty@localhost/billing'
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     JWT_SECRET_KEY = 'sshhhffgdgdjskka'
     JWT_ACCESS_TOKEN_EXPIRES = timedelta(days=1)

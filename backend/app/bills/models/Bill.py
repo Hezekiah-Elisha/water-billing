@@ -10,7 +10,7 @@ class Bill(db.Model):
     meter_id = db.Column(db.Integer, db.ForeignKey('meters.id'))
     units = db.Column(db.Integer, nullable=True)
     amount = db.Column(db.Float, nullable=True)
-    status = db.Column(db.String, nullable=True)
+    status = db.Column(db.String(255), nullable=True)
     created_at = db.Column(
         db.DateTime,
         nullable=True,

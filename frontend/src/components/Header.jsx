@@ -9,8 +9,8 @@ import api from '../api';
 export default function Header() {
   const { currentUser } = useSelector(state => state.user);
   const dispatch = useDispatch();
-  console.log(currentUser)
-  console.log(currentUser.access_token)
+  // console.log(currentUser)
+  // console.log(currentUser.access_token)
 
   const handleSignout = async () => {
     try{

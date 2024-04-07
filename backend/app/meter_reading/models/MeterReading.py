@@ -21,9 +21,9 @@ class MeterReading(db.Model):
     meter_id = db.Column(db.Integer, db.ForeignKey('meters.id'))
     user_id = db.Column(db.Integer, db.ForeignKey('users.id'))
     reading = db.Column(db.Integer)
-    reading_image = db.Column(db.String, nullable=False)
+    reading_image = db.Column(db.String(255), nullable=False)
     reading_date = db.Column(db.DateTime)
-    reading_gps_coordinates = db.Column(db.String, nullable=False)
+    reading_gps_coordinates = db.Column(db.String(255), nullable=False)
     comments = db.Column(db.Text)
     created_at = db.Column(db.DateTime, default=db.func.current_timestamp())
     updated_at = db.Column(db.DateTime, default=db.func.current_timestamp(), 
